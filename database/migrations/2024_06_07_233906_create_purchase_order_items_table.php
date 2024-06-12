@@ -14,8 +14,8 @@ return new class extends Migration
             $table->foreignId('purchase_orders_id');
             $table->foreignId('products_id');
             $table->float('quantity');
-            $table->float('price', 2);
-            $table->float('subtotal', 2);
+            $table->float('price');
+            $table->float('subtotal');
             $table->timestamps();
         });
     }
