@@ -12,7 +12,7 @@ return new class extends Migration
         Schema::create('purchase_orders', function (Blueprint $table) {
             $table->id();
             $table->foreignId('client_id');
-            $table->string('purchase_date');
+            $table->date('purchase_date');
             $table->enum('status', ['processing'], ['sent'], ['deliver']);
             $table->timestamps();
         });

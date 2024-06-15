@@ -11,11 +11,11 @@ return new class extends Migration
     {
         Schema::create('purchase_order_items', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('purchase_orders_id');
+            $table->foreignId('purchase_order_id');
             $table->foreignId('products_id');
-            $table->float('quantity');
-            $table->float('price');
-            $table->float('subtotal');
+            $table->integer('quantity');
+            $table->integer('price');
+            $table->integer('subtotal');
             $table->timestamps();
         });
     }
